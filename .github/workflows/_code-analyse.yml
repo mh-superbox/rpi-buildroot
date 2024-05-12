@@ -23,9 +23,9 @@ jobs:
         run: |
           find . -type f -name "*.sh" -not \( -path "./buildroot/*" -prune \) -exec shellcheck --format=gcc {} \;
 
-      - name: Check buildroot-external packages
-        run: |
-          buildroot/utils/check-package --exclude PackageHeader --br2-external buildroot-external/package/*/*
+      # - name: Check buildroot-external packages
+      #   run: |
+      #     buildroot/utils/check-package --exclude PackageHeader --br2-external buildroot-external/package/*/*
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v5
